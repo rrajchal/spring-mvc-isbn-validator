@@ -1,0 +1,12 @@
+package com.rajesh;
+
+import junit.framework.TestCase;
+
+public class IsbnValidatorTest extends TestCase {
+	
+	
+	String userInput = ("93-86954-21-4");
+	IsbnValidator validate = new IsbnValidator(userInput);
+	System.out.println("hi");
+
+}

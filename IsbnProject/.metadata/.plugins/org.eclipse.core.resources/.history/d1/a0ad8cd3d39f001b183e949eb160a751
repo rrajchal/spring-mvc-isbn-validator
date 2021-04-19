@@ -1,0 +1,6 @@
+package com.rajesh;
+
+@Data
+public class IsbnBean {
+
+}

@@ -1,0 +1,11 @@
+package com.rajesh;
+
+
+public class IsbnValidatorTest {
+	
+	
+	String userInput = ("93-86954-21-4");
+	IsbnValidator validate = new IsbnValidator(userInput);
+	System.out.println("hi");
+
+}

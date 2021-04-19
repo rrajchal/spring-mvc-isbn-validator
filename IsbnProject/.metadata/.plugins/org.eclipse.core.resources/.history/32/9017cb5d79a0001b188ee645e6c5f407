@@ -1,0 +1,18 @@
+package com.rajesh;
+
+import static org.junit.Assert.assertEquals;
+
+
+public class IsbnValidatorTest {
+
+	@Test
+	public void test() {
+
+		IsbnValidator isbn = new IsbnValidator("abc");
+		assertEquals(isbn.getValidate(), false);
+		
+		System.out.println("True");
+		return suite;
+	}
+
+}

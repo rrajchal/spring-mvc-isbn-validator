@@ -1,0 +1,19 @@
+package com.rajesh;
+
+import junit.framework.TestCase;
+
+public class IsbnValidatorTest extends TestCase {
+
+	public void testIsbnValidator() {
+		fail("Not yet implemented");
+	}
+
+	public void testGetValidate() {
+		fail("Not yet implemented");
+	}
+
+	public void testSetValidate() {
+		fail("Not yet implemented");
+	}
+
+}

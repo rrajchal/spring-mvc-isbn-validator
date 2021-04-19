@@ -1,0 +1,19 @@
+package com.rajesh;
+
+import junit.framework.TestCase;
+
+public class IsbnValidatorTest extends TestCase {
+
+	public void testIsbnValidator() {
+		System.out.println("Testing IsbnValidatorTest...");
+		IsbnValidator isbn = new IsbnValidator("abc");
+
+		boolean valid = isbn.getValidate();
+		assertEquals(valid, false);
+		
+		
+	}
+
+	
+
+}

@@ -1,0 +1,29 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<html>
+	
+	<link rel="stylesheet" type="text/css" href="/css/myStyle.css">
+	<title>ISBN Validation</title>
+
+	<body>
+		<h2>Hello World!</h2>
+		
+		<form action="validateIsbn"  method="post">
+			<input type="text" name="t1"><br> 
+			<input type="text" name="t2"><br> 
+			<input type="submit" value="Submit">
+			<br>
+	
+			<h2 class="center">Enter ISBN Number</h2>
+			<div class="center">
+				<input class="spacer100" type="text" id="isbnNum" name="isbnNum"
+					   placeholder="Enter 10 or 13 digit ISBN Number" maxlength="20" minlength="10" required="required">
+				<br>
+				<br>
+				<input type="submit" value="Check" onclick="initialValidation()">
+			</div>
+		</form> 
+		
+		
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<html>
+	
+	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+	<title>ISBN Validation</title>
+
+	<body>
+		<h2>Hello World!</h2>
+		
+		<form action="validateIsbn"  method="post">
+			
+			<br>
+	
+			<h2 class="center">Enter ISBN Number</h2>
+			<div class="center">
+				<input class="spacer100" type="text" id="isbnNum" name="isbnNum"
+					   placeholder="Enter 10 or 13 digit ISBN Number" pattern=".{10,}"  maxlength="20"  
+					   title="Must contain 10-20 characters"
+					   required="required">
+				<br>
+				<label for="result" id="result"><%request.getParameter("result");%></label>
+				<br>
+				<input type="submit" value="Check">
+			</div>
+		</form> 
+		
+		
+	</body>
+</html>

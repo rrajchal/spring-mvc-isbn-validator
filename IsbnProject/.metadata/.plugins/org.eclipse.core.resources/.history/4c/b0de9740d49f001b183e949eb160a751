@@ -1,0 +1,11 @@
+package com.rajesh;
+
+import lombok.Setter;
+import lombok.Getter;
+
+@Getter
+@Setter
+public class IsbnBean {
+	String isbn;
+	String result;
+}

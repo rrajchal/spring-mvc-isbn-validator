@@ -1,0 +1,8 @@
+package com.rajesh;
+
+public class IsbnBean {
+	String isbn;
+	String result;
+	
+
+}

@@ -1,0 +1,27 @@
+package com.rajesh;
+
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+
+// for the replacement of isbn-servlet.xml
+public class IsbnConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		
+		return new Class[] {IsbnServletConfig.class};
+	}
+
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		// TODO Auto-generated method stub
+		return new Class[] {IsbnServletConfig.class};
+	}
+
+	@Override
+	protected String[] getServletMappings() {
+		
+		return new String[] {"/"};
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.rajesh;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+
+// for the replacement of web.xml
+@Configuration
+@EnableWebMvc
+@ComponentScan("com.rajesh")
+public class IsbnComponent extends WebMvcConfigurerAdapter {
+
+}

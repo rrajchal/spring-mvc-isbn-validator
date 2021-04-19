@@ -1,0 +1,7 @@
+package com.rajesh;
+
+import junit.framework.TestCase;
+
+public class IsbnValidatorTest extends TestCase {
+
+}

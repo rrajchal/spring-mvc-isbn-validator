@@ -1,0 +1,48 @@
+package com.rajesh;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+@EnableWebMvc
+@Controller
+@WebServlet(name="result",urlPatterns={"/validateIsbn"})
+public class IsbnValidatorController extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	//@RequestMapping("/validateIsbn")
+	//public String validateIsbn(HttpServletRequest request, HttpServletResponse response) {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
+		String userInput = request.getParameter("isbnNum");
+		IsbnValidator isbn = new IsbnValidator(userInput);
+		String result = null;
+		if (isbn.getValidate()) {
+			result = userInput + ": " + "is a valid ISBN number.";
+		}
+		else {
+			result = userInput + ": " + "is NOT a valid ISBN number.";
+		}
+		System.out.println("############################: " + result);
+		//return "index.jsp";
+		HttpSession session = request.getSession();
+		session.setAttribute("result", result);
+		response.sendRedirect("/isbn/index.jsp");
+		
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
+		System.out.println("============Hi============");
+		doGet(request, response);
+	}
+
+}

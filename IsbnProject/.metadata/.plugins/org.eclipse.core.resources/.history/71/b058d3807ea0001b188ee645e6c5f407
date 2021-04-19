@@ -1,0 +1,93 @@
+package com.rajesh;
+
+import junit.framework.TestCase;
+
+public class IsbnValidatorTest extends TestCase {
+
+	public void testIsbnValidator() {
+		System.out.println("Testing IsbnValidatorTest...");
+		
+		IsbnValidator isbn = new IsbnValidator("");
+		
+		String good[] = getGoodData();
+		String bad[] = getBadData();
+		/*
+		for (String g : good) {
+			isbn = new IsbnValidator(g);
+			System.out.println(g);
+			assertEquals(isbn.getValidate().booleanValue(), true);
+		}
+		*/
+		for (String b : bad) {
+			isbn = new IsbnValidator(b);
+			System.out.println(b);
+			assertEquals(isbn.getValidate().booleanValue(), false);
+		}
+
+		
+		
+		
+	}
+	
+	public String [] getGoodData () {
+		return new String[] {
+				"0-9752298-0-X", 
+				"097522980X", 
+				"99921-58-10-7", 
+				"9971-5-0210-0", 
+				"960-425-059-0", 
+				"80-902734-1-6", 
+				"85-359-0277-5", 
+				"1-84356-028-3", 
+				"0-684-84328-5", 
+				"0-8044-2957-X", 
+				"0-85131-041-9", 
+				"93-86954-21-4", 
+				"0-943396-04-2", 
+				"0-9752298-0-X", 
+				"9992158107", 
+				"9971502100", 
+				"9604250590", 
+				"8090273416", 
+				"8535902775", 
+				"1843560283", 
+				"0684843285", 
+				"080442957X", 
+				"0851310419", 
+				"9386954214", 
+				"0943396042", 
+				"097522980X" };
+	}
+
+	public String [] getBadData () {
+		return new String[] {
+				"0-9752298-0-Y", 
+				"097522980X", 
+				"99921-58-10-6", 
+				"9971-5-0210-1", 
+				"960-425-059-1", 
+				"80-902734-1-5", 
+				"85-359-0277-6", 
+				"1-84356-028-4", 
+				"0-684-84328-4", 
+				"0-8044-2957", 
+				"0-85131-041", 
+				"93-86954-21-3", 
+				"0-943396-04-1", 
+				"0-9752298-0-Y", 
+				"9992158107a", 
+				"9971502100v", 
+				"9604250590c", 
+				"8090273416d", 
+				"8535902775e", 
+				"1843560283g", 
+				"0684843285f", 
+				"080442957Xg", 
+				"0851310419g", 
+				"9386954214g", 
+				"0943396042g", 
+				"097522980Xm" };
+	}
+	
+
+}
